@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<title>每日审美</title>
+</head>
+<body>
+
+<!-- ═══ DAILY PAGE ═══ -->
+<div class="page active" id="page-daily">
+  <div class="app-header">
+    <div class="section-label">—— 今日主题</div>
+  </div>
+  <div id="theme-card"></div>
+  <div id="work-detail"></div>
+</div>
+
+<!-- ═══ EXPLORE PAGE ═══ -->
+<div class="page" id="page-explore">
+  <div class="app-header">
+    <div style="font-size:28px;font-weight:700;color:var(--text-title);margin:0 0 16px">探索</div>
+  </div>
+  <div class="explore-grid" id="explore-grid"></div>
+</div>
+
+<!-- ═══ FAVORITES PAGE ═══ -->
+<div class="page" id="page-favorites">
+  <div class="app-header">
+    <div style="font-size:28px;font-weight:700;color:var(--text-title);margin:0 0 16px">收藏</div>
+  </div>
+  <div id="fav-list" style="padding:0 16px"></div>
+</div>
+
+<!-- ═══ PROFILE PAGE ═══ -->
+<div class="page" id="page-profile">
+  <div id="profile-content"></div>
+</div>
+
+<!-- ═══ TAB BAR ═══ -->
+<div class="tab-bar">
+  <div class="tab-item active" data-tab="daily" onclick="switchTab('daily')">
+    <div class="icon">◎</div><div>今日</div>
+  </div>
+  <div class="tab-item" data-tab="explore" onclick="switchTab('explore')">
+    <div class="icon">◈</div><div>探索</div>
+  </div>
+  <div class="tab-item" data-tab="favorites" onclick="switchTab('favorites')">
+    <div class="icon">♥</div><div>收藏</div>
+  </div>
+  <div class="tab-item" data-tab="profile" onclick="switchTab('profile')">
+    <div class="icon">◉</div><div>我的</div>
+  </div>
+</div>
+
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

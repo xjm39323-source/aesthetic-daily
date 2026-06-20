@@ -1,0 +1,27 @@
+﻿name: Daily Aesthetic Build
+on:
+  schedule:
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: cd scraper && pip install -r requirements.txt
+      - name: Run scraper
+        env:
+          UNSPLASH_KEY: ${{ secrets.UNSPLASH_KEY }}
+          PEXELS_KEY: ${{ secrets.PEXELS_KEY }}
+          TMDB_KEY: ${{ secrets.TMDB_KEY }}
+        run: cd scraper && python build.py
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./web
