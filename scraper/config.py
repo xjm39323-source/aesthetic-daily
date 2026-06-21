@@ -12,6 +12,7 @@ MUSEUM_BASE = "https://collectionapi.metmuseum.org/public/collection/v1"
 
 # Sources to use - disable if no key
 SOURCES = {
+    "picsum": True,   # no key needed, always on
     "pexels": bool(PEXELS_KEY),
     "unsplash": bool(UNSPLASH_KEY),
     "tmdb": bool(TMDB_KEY),

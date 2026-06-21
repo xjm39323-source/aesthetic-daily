@@ -6,6 +6,15 @@ def main():
     pool = []
 
     # Fetch from all available sources
+    # Picsum - always available, no key needed
+    from sources.picsum_source import fetch as picsum_fetch
+    picsum_items = picsum_fetch(10)
+    for item in picsum_items:
+        if not item.get("category"):
+            item["category"] = "摄影"
+    pool.extend(picsum_items)
+    print(f"  Picsum: {len(picsum_items)} works")
+
     if SOURCES.get("pexels"):
         from sources.pexels_source import fetch as pexels_fetch
         for cat in ["nature", "architecture", "fashion", "photography", "cg", "design"]:
@@ -81,5 +90,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

@@ -1,7 +1,7 @@
 ﻿import requests
 from config import PEXELS_KEY
 
-HEADERS = {"Authorization": PEXELS_KEY}
+HEADERS = {"Authorization": PEXELS_KEY} if PEXELS_KEY else {}
 CATEGORY_MAP = {
     "nature": ("自然/微距", "nature", "landscape"),
     "architecture": ("建筑/空间", "architecture", "interior"),
