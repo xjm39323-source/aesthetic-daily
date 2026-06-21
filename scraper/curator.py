@@ -24,9 +24,9 @@ def create_daily_theme(pool):
     cat = CATEGORIES[day_num % len(CATEGORIES)]
     theme_name = random.choice(THEME_TEMPLATES.get(cat, ["精选"]))
     cat_pool = [w for w in pool if w.get("category", "").startswith(cat[:2])] or pool
-    selected = random.sample(cat_pool, min(10, len(cat_pool)))
+    selected = random.sample(cat_pool, min(10, len(cat_pool))) if len(cat_pool) >= 2 else cat_pool[:]
     if len(selected) < 10:
-        extras = random.sample(pool, min(10 - len(selected), len(pool)))
+        extras = random.sample(pool, min(10 - len(selected), len(pool))) if len(pool) >= 2 else pool[:]
         selected.extend(extras)
 
     # Add analysis text

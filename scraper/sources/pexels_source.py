@@ -1,7 +1,7 @@
 ﻿import requests
 from config import PEXELS_KEY
 
-HEADERS = {"Authorization": PEXELS_KEY} if PEXELS_KEY else {}
+HEADERS = {"Authorization": PEXELS_KEY} if PEXELS_KEY else {}  # Pexels allows limited requests without key
 CATEGORY_MAP = {
     "nature": ("自然/微距", "nature", "landscape"),
     "architecture": ("建筑/空间", "architecture", "interior"),
@@ -37,3 +37,4 @@ def fetch(category_key="photography", count=5):
                 })
         except: continue
     return label, results
+
