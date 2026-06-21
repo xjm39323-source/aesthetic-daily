@@ -24,7 +24,7 @@ def main():
 
     if SOURCES.get("reddit"):
         from sources.reddit_source import fetch as reddit_fetch
-        for cat in list(CATEGORIES.keys())[:4]:
+        for cat in list(range(min(4, len(CATEGORIES)))):
             items = reddit_fetch(cat, 3)
             pool.extend(items)
             print(f"  Reddit/{cat}: {len(items)} works")
@@ -73,7 +73,7 @@ def main():
 
     # Save
     output = {"theme": theme}
-    os.makedirs("../web/js", exist_ok=True)
+    os.makedirs("../js", exist_ok=True)
     with open("../js/data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\n✅ Theme saved: Day {theme['day']} - {theme['title']} ({len(theme['works'])} works)")
@@ -81,3 +81,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

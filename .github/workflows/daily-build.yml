@@ -24,8 +24,8 @@ jobs:
         run: |
           git config --global user.name 'aesthetic-bot'
           git config --global user.email 'bot@aesthetic-daily'
-          ls -la js/data.json 2>/dev/null && cp js/data.json data.json 2>/dev/null || true
-          ls -la js/data.json 2>/dev/null && cp js/data.json data.json 2>/dev/null || true
+          cp scraper/../js/data.json data.json 2>/dev/null || true
+          cp scraper/../js/data.json data.json 2>/dev/null || true
           git add data.json 2>/dev/null || true
           git diff --quiet && git diff --staged --quiet || git commit -m 'auto: update daily theme'
           git push
