@@ -9,7 +9,7 @@
     "works": [
       {
         "id": "builtin-1",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/cartier/800/1000",
         "title": "晨光中的轮廓",
         "author": "Henri Cartier-Bresson",
         "year": "1932",
@@ -21,7 +21,7 @@
       },
       {
         "id": "builtin-2",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/sugimoto/800/1000",
         "title": "对称的庄严",
         "author": "杉本博司",
         "year": "1999",
@@ -33,7 +33,7 @@
       },
       {
         "id": "builtin-3",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/vivienne/800/1000",
         "title": "流动的霓虹",
         "author": "Vivienne Mok",
         "year": "2018",
@@ -45,7 +45,7 @@
       },
       {
         "id": "builtin-4",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/macro/800/1000",
         "title": "微观宇宙",
         "author": "David Chambon",
         "year": "2020",
@@ -57,7 +57,7 @@
       },
       {
         "id": "builtin-5",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/miyazaki/800/1000",
         "title": "千与千寻·海上列车",
         "author": "宫崎骏 / 吉卜力工作室",
         "year": "2001",
@@ -69,7 +69,7 @@
       },
       {
         "id": "builtin-6",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/beeple/800/1000",
         "title": "未来之城",
         "author": "Beeple (Mike Winkelmann)",
         "year": "2021",
@@ -77,11 +77,11 @@
         "tags": ["赛博朋克", "数字艺术", "城市"],
         "composition": "鸟瞰式大远景构图，城市的几何线条呈放射状向四周延伸。",
         "colorAnalysis": "蓝紫冷调为主，霓虹粉红点缀，经典的赛博朋克配色。",
-        "aestheticNote": "每一栋建筑、每一条街道的细节都经过精密计算，构建出一个令人信服的未来世界。"
+        "aestheticNote": "每一栋建筑每一条街道的细节都经过精密计算，构建出一个令人信服的未来世界。"
       },
       {
         "id": "builtin-7",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/kenya/800/1000",
         "title": "负空间·椅",
         "author": "原研哉",
         "year": "2004",
@@ -93,7 +93,7 @@
       },
       {
         "id": "builtin-8",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/renoir/800/1000",
         "title": "玫瑰色的贝雷帽",
         "author": "Pierre-Auguste Renoir",
         "year": "1890",
@@ -105,7 +105,7 @@
       },
       {
         "id": "builtin-9",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/appleui/800/1000",
         "title": "iPad 极简UI",
         "author": "Apple Design Team",
         "year": "2018",
@@ -117,7 +117,7 @@
       },
       {
         "id": "builtin-10",
-        "imageName": "https://picsum.photos/seed/aesthetic1/800/1000",
+        "imageName": "https://picsum.photos/seed/deakins/800/1000",
         "title": "银翼杀手2049",
         "author": "Denis Villeneuve / Roger Deakins",
         "year": "2017",
@@ -130,4 +130,3 @@
     ]
   }
 }
-
