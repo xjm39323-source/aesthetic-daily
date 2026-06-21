@@ -74,7 +74,7 @@ def main():
     # Save
     output = {"theme": theme}
     os.makedirs("../web/js", exist_ok=True)
-    with open("../web/js/data.json", "w", encoding="utf-8") as f:
+    with open("../js/data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"\n✅ Theme saved: Day {theme['day']} - {theme['title']} ({len(theme['works'])} works)")
     print(f"   Pool size: {len(pool)} total works fetched")
