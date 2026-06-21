@@ -20,8 +20,12 @@ jobs:
           PEXELS_KEY: ${{ secrets.PEXELS_KEY }}
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
         run: cd scraper && python build.py
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web
+      - name: Commit and push data.json
+        run: |
+          git config --global user.name 'aesthetic-bot'
+          git config --global user.email 'bot@aesthetic-daily'
+          ls -la js/data.json 2>/dev/null && cp js/data.json data.json 2>/dev/null || true
+          ls -la js/data.json 2>/dev/null && cp js/data.json data.json 2>/dev/null || true
+          git add data.json 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || git commit -m 'auto: update daily theme'
+          git push
