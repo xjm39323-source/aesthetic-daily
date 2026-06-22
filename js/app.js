@@ -31,23 +31,21 @@ function renderThemeCard() {
 function renderWork() {
   const t = state.theme; if (!t) return
   const w = t.works[state.workIndex]; if (!w) return
-  const fav = Store.isFavorited(w.id || w.imageName)
+  const fav = Store.isFavorited(w.id)
+  const imgUrl = w.imageUrl || w.imageName || ""
 
   document.getElementById("work-detail").innerHTML = `
     <div class="work-image-wrapper">
-      <img class="work-image" src="${w.imageName}" alt="${w.title}" loading="lazy"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-        onload="this.style.display='block';this.nextElementSibling.style.display='none'" />
-      <div class="work-image work-image-fallback" style="display:none;align-items:center;justify-content:center;color:var(--text-secondary)">
-        <div style="text-align:center"><div style="font-size:48px">✦</div><div style="font-size:12px;margin-top:8px">图片加载中...</div></div>
-      </div>
+      ${imgUrl ? `<img class="work-image" src="${imgUrl}" alt="${w.title}" loading="lazy"
+        onerror="this.outerHTML='<div class=work-image style=background:#ddd;display:flex;align-items:center;justify-content:center><span style=font-size:48px;color:#999>✦</span></div>'" />`
+      : `<div class="work-image" style="background:${w.gradient || "#ddd"};display:flex;align-items:center;justify-content:center"><span style="font-size:48px;color:rgba(255,255,255,0.2)">✦</span></div>`}
     </div>
     <div class="work-info">
       <div>
         <div class="work-title">${w.title || "无标题"}</div>
-        <div class="work-meta">${w.author || ""}${w.year ? " · " + w.year : ""}</div>
+        <div class="work-meta">${w.author || ""}</div>
       </div>
-      <div class="fav-btn ${fav ? "active" : ""}" onclick="toggleFav('${w.id || w.imageName}')">${fav ? "♥" : "♡"}</div>
+      <div class="fav-btn ${fav ? "active" : ""}" onclick="toggleFav('${w.id}')">${fav ? "♥" : "♡"}</div>
     </div>
     <div class="tags">${(w.tags||[]).map(t => `<span class="tag">${t}</span>`).join("")}</div>
     ${w.composition ? collapsibleHTML("📐 构图分析", w.composition) : ""}
@@ -66,18 +64,9 @@ function collapsibleHTML(title, content) {
     <div class="collapsible-body">${content}</div></div>`
 }
 
-function nextWork() {
-  const t = state.theme
-  if (t && state.workIndex < t.works.length - 1) { state.workIndex++; renderWork() }
-}
-
-function prevWork() {
-  if (state.workIndex > 0) { state.workIndex--; renderWork() }
-}
-
-function toggleFav(id) {
-  Store.toggleFavorite(id); Store._set("favs", Store.getFavorites()); renderWork()
-}
+function nextWork() { const t = state.theme; if (t && state.workIndex < t.works.length - 1) { state.workIndex++; renderWork() } }
+function prevWork() { if (state.workIndex > 0) { state.workIndex--; renderWork() } }
+function toggleFav(id) { Store.toggleFavorite(id); Store._set("favs", Store.getFavorites()); renderWork() }
 
 function switchTab(tab) {
   state.tab = tab
@@ -92,23 +81,20 @@ function switchTab(tab) {
 function renderExplore() {
   const cats = ["电影美学","三维/CG","摄影","动漫","平面设计","建筑/空间","插画","时尚","UI/UX","自然/微距"]
   const icons = {"电影美学":"🎬","三维/CG":"💻","摄影":"📷","动漫":"🎨","平面设计":"🖼","建筑/空间":"🏛","插画":"✏️","时尚":"👕","UI/UX":"📱","自然/微距":"🌿"}
-  document.getElementById("explore-grid").innerHTML = cats.map(c =>
-    `<div class="cat-card"><div class="icon">${icons[c]||"✦"}</div><div class="name">${c}</div></div>`).join("")
+  document.getElementById("explore-grid").innerHTML = cats.map(c => `<div class="cat-card"><div class="icon">${icons[c]||"✦"}</div><div class="name">${c}</div></div>`).join("")
 }
 
 function renderFavorites() {
   const favIds = Store.getFavorites(); const t = state.theme
-  if (!favIds.length) {
-    document.getElementById("fav-list").innerHTML = `<div class="empty-state"><div class="icon">♡</div><p>还没有收藏</p></div>`
-  } else {
-    document.getElementById("fav-list").innerHTML = favIds.map(id => {
-      const w = t ? t.works.find(x => (x.id || x.imageName) === id) : null
-      return `<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border-radius:8px;margin-bottom:8px;border:1px solid var(--border)">
-        ${w && w.imageName ? `<img src="${w.imageName}" style="width:60px;height:60px;border-radius:8px;object-fit:cover" onerror="this.outerHTML='<div style=\\'width:60px;height:60px;border-radius:8px;background:var(--light);display:flex;align-items:center;justify-content:center;color:var(--text-secondary)\\'>✦</div>'" />`
-          : `<div style="width:60px;height:60px;border-radius:8px;background:var(--light);display:flex;align-items:center;justify-content:center;color:var(--text-secondary)">✦</div>`}
-        <div><div style="font-size:14px;color:var(--text-title)">${w ? w.title : id}</div><div style="font-size:11px;color:var(--text-secondary)">已收藏</div></div></div>`
-    }).join("")
-  }
+  if (!favIds.length) { document.getElementById("fav-list").innerHTML = `<div class="empty-state"><div class="icon">♡</div><p>还没有收藏</p></div>`; return }
+  document.getElementById("fav-list").innerHTML = favIds.map(id => {
+    const w = t ? t.works.find(x => x.id === id) : null
+    const img = w ? (w.imageUrl || w.imageName || "") : ""
+    return `<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border-radius:8px;margin-bottom:8px;border:1px solid var(--border)">
+      ${img ? `<img src="${img}" style="width:60px;height:60px;border-radius:8px;object-fit:cover" onerror="this.outerHTML='<div style=\\'width:60px;height:60px;border-radius:8px;background:var(--light);display:flex;align-items:center;justify-content:center\\'>✦</div>'" />`
+      : `<div style="width:60px;height:60px;border-radius:8px;background:var(--light);display:flex;align-items:center;justify-content:center">✦</div>`}
+      <div><div style="font-size:14px;color:var(--text-title)">${w ? w.title : id}</div><div style="font-size:11px;color:var(--text-secondary)">已收藏</div></div></div>`
+  }).join("")
 }
 
 function renderProfile() {
@@ -122,8 +108,7 @@ function renderProfile() {
     </div>
     <div class="section"><div class="label">审美偏好</div><div class="pref-card" id="pref-bars"></div></div>`
   const cats = ["电影美学","三维/CG","摄影","动漫","平面设计","建筑/空间","插画","时尚","UI/UX","自然/微距"]
-  document.getElementById("pref-bars").innerHTML = cats.map(c =>
-    `<div class="pref-row"><div class="row"><span>${c}</span><span>10%</span></div><div class="pref-bar"><div class="fill" style="width:10%"></div></div></div>`).join("")
+  document.getElementById("pref-bars").innerHTML = cats.map(c => `<div class="pref-row"><div class="row"><span>${c}</span><span>10%</span></div><div class="pref-bar"><div class="fill" style="width:10%"></div></div></div>`).join("")
 }
 
 document.addEventListener("DOMContentLoaded", () => {
