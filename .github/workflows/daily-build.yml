@@ -1,4 +1,4 @@
-﻿name: Daily Aesthetic Build
+name: Daily Aesthetic Build
 on:
   schedule:
     - cron: '0 22 * * *'
@@ -15,15 +15,14 @@ jobs:
       - name: Install deps
         run: cd scraper && pip install -r requirements.txt
       - name: Run scraper
-
         run: cd scraper && python build.py
       - name: Commit and push data.json
         run: |
-          git config --global user.name 'aesthetic-bot'
-          git config --global user.email 'bot@aesthetic-daily'
-          cp scraper/../js/data.json data.json 2>/dev/null || true
-          cp scraper/../js/data.json data.json 2>/dev/null || true
-          git add data.json 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || git commit -m 'auto: update daily theme'
-          git push
-
+          cp js/data.json data.json 2>/dev/null || true
+          if [ -f data.json ]; then
+            git config user.name 'aesthetic-bot'
+            git config user.email 'bot@aesthetic-daily'
+            git add data.json
+            git diff --quiet --cached || git commit -m "auto: update daily theme [skip ci]"
+            git push
+          fi
