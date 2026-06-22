@@ -56,11 +56,11 @@ body {
 /* Work Detail */
 .work-detail { padding: 0 16px; }
 .work-image {
-  width: 100%; aspect-ratio: 1.2; border-radius: 12px;
+  width: 100%; aspect-ratio: 0.8; border-radius: 12px;
   background: var(--light); object-fit: cover; display: block;
 }
 .work-info { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 16px; }
-.work-title { font-size: 20px; font-weight: 600; color: var(--text-title); }
+.work-title { font-size: 22px; font-weight: 700; color: var(--text-title); }
 .work-meta { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
 .fav-btn { font-size: 22px; cursor: pointer; user-select: none; color: var(--border); }
 .fav-btn.active { color: var(--text-title); }
