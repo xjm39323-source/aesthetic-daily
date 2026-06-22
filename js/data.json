@@ -1,122 +1,112 @@
-{
-  "theme": {
-    "id": "auto-day-537",
-    "day": 537,
+{"theme": {"id": "auto-day-538", "day": 538, "category": "摄影", "title": "光影之美", "subtitle": "每日审美提升", "colorHex": "#2C3E50", "works": [
+  {
+    "id": "pex-1",
+    "title": "海岸城市",
+    "author": "Stephan Louis",
     "category": "摄影",
-    "title": "构图的力量",
-    "subtitle": "审美提升 · 每日一课",
-    "colorHex": "#2C3E50",
-    "works": [
-      {
-        "id": "w-001",
-        "title": "光影叙事",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #2C3E50, #3498DB)",
-        "tags": ["光影", "构图"],
-        "composition": "对角线构图将观者视线从左下角引向右上方的视觉焦点，画面层次丰富。",
-        "colorAnalysis": "色彩克制而富有表现力，冷暖调之间形成微妙的平衡。",
-        "aestheticNote": "好的构图不是规则本身，而是规则服务于情感。光线选择性地照亮了画面中最有故事的部分。"
-      },
-      {
-        "id": "w-002",
-        "title": "线与面",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #1a1a2e, #16213e)",
-        "tags": ["线条", "极简"],
-        "composition": "利用重复的线条形成节奏感，几何元素在画面中创造出秩序之美。",
-        "colorAnalysis": "低饱和度配色让画面安静而高级，视觉重心集中在形体的轮廓上。",
-        "aestheticNote": "极简主义的核心不是空，而是精确。每一个出现在画面中的元素都有不可替代的位置。"
-      },
-      {
-        "id": "w-003",
-        "title": "自然的轮廓",
-        "author": "审美笔记",
-        "category": "自然/微距",
-        "gradient": "linear-gradient(135deg, #2d5016, #5B8C2A)",
-        "tags": ["自然", "肌理"],
-        "composition": "框架式构图，利用前景的轮廓框住主体，创造出画中画的纵深感。",
-        "colorAnalysis": "大地色系为主，暖黄与橄榄绿交织，传达出温暖而沉静的秋日氛围。",
-        "aestheticNote": "自然界是最好的构图老师——每一片树叶的脉络、每一道水波的纹路，都遵循着某种内在的数学之美。"
-      },
-      {
-        "id": "w-004",
-        "title": "建筑的呼吸",
-        "author": "审美笔记",
-        "category": "建筑/空间",
-        "gradient": "linear-gradient(135deg, #4A4A4A, #8E8E8E)",
-        "tags": ["建筑", "光影"],
-        "composition": "引导线运用娴熟，建筑的线条将视线引向画面深处的天空，空间感强烈。",
-        "colorAnalysis": "冷灰色调赋予建筑理性的气质，而一束暖光的介入打破了冰冷。",
-        "aestheticNote": "建筑摄影的魅力在于——当光线、几何和材质三者完美交汇的瞬间，水泥也能产生诗意的共鸣。"
-      },
-      {
-        "id": "w-005",
-        "title": "街角的颜色",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #8B0000, #CD5C5C)",
-        "tags": ["街头", "色彩"],
-        "composition": "三分法构图中，主体置于右侧黄金分割点，左侧留白让画面有呼吸感。",
-        "colorAnalysis": "大胆的补色搭配让普通的街角充满电影感。",
-        "aestheticNote": "街头摄影的魔法在于从混乱中提取秩序。当色彩、光影和人物在某一刻偶然交汇，平凡变成不凡。"
-      },
-      {
-        "id": "w-006",
-        "title": "镜像对称",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #1a1a2e, #4a90d9)",
-        "tags": ["对称", "反射"],
-        "composition": "完美的上下对称构图，水面倒影让画面产生双重视觉体验。",
-        "colorAnalysis": "冷色调为主，蓝色与灰色的渐变营造出平静而深邃的氛围。",
-        "aestheticNote": "对称是视觉上最让人舒适的形式之一。它给我们一种秩序感和完整感。"
-      },
-      {
-        "id": "w-007",
-        "title": "前景的叙事",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #2C1810, #8B4513)",
-        "tags": ["层次", "景深"],
-        "composition": "利用前景物体形成视觉框架，中景为主体，三层空间层次分明。",
-        "colorAnalysis": "色调从前到后逐渐明亮，形成自然的视觉引导。",
-        "aestheticNote": "好的画面应该像一扇窗——有近景的依靠、中景的故事、远景的想象。"
-      },
-      {
-        "id": "w-008",
-        "title": "留白的意境",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #F5F5F5, #E0E0E0)",
-        "tags": ["留白", "极简"],
-        "composition": "大面积留白，主体极小且偏下放置，制造出空旷寂寥的东方美学意境。",
-        "colorAnalysis": "几乎单色的画面，细微的灰度变化考验对影调的精确控制。",
-        "aestheticNote": "留白不是空白，而是给观者的想象力预留的空间。少即是多，在克制中见丰富。"
-      },
-      {
-        "id": "w-009",
-        "title": "动与静",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #1a1a2e, #6A5ACD)",
-        "tags": ["动感", "对比"],
-        "composition": "利用慢门拍摄，流动的物体产生虚化，静止的背景保持清晰，动静对比强烈。",
-        "colorAnalysis": "灰调中透出微弱的环境色，虚化的部分形成了抽象的色彩色块。",
-        "aestheticNote": "摄影是关于时间的艺术。在千分之一秒的凝固和数秒的曝光之间，记录的是完全不同的世界。"
-      },
-      {
-        "id": "w-010",
-        "title": "纹理的韵律",
-        "author": "审美笔记",
-        "category": "摄影",
-        "gradient": "linear-gradient(135deg, #3E2723, #A1887F)",
-        "tags": ["纹理", "重复"],
-        "composition": "特写取景，重复的纹理充满画面，形成强烈的视觉节奏感。",
-        "colorAnalysis": "单一色调中的微妙色相变化，考验对色彩的敏感度。",
-        "aestheticNote": "微观视角让我们发现日常中被忽略的美。最普通的表面下也藏着惊人的秩序和美感。"
-      }
-    ]
+    "imageUrl": "https://images.pexels.com/photos/19772227/pexels-photo-19772227.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["城市", "海岸", "航拍"],
+    "composition": "鸟瞰构图将城市与海洋的边界线置于画面下三分之一处，形成清晰的空间分区。右侧城市建筑的密集与左侧海洋的开阔形成疏密对比。",
+    "colorAnalysis": "青蓝色海洋与灰白色建筑形成冷暖交织，整体色调统一而富有变化。",
+    "aestheticNote": "航拍视角让我们以全新的方式审视熟悉的世界。当城市边界与自然海岸线相遇，人造与天然的对话在画面中展开。"
+  },
+  {
+    "id": "pex-2",
+    "title": "马特洪峰",
+    "author": "Ilia Bronskiy",
+    "category": "自然/微距",
+    "imageUrl": "https://images.pexels.com/photos/29734962/pexels-photo-29734962.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["山峰", "自然", "风景"],
+    "composition": "雄浑的三角构图，山峰占据画面中心偏左，引导线沿山脊向峰顶汇聚，形成稳定的视觉重心。",
+    "colorAnalysis": "蓝灰色山脉与白色积雪形成明度对比，天空的淡蓝与山体的深蓝构成同色系渐变。",
+    "aestheticNote": "大自然的几何学——山峰的三角形是最稳定的形态，也是自古以来人类对崇高的视觉象征。"
+  },
+  {
+    "id": "pex-3",
+    "title": "雾中登山者",
+    "author": "Dinidu Missaka",
+    "category": "摄影",
+    "imageUrl": "https://images.pexels.com/photos/37988765/pexels-photo-37988765.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["登山", "迷雾", "剪影"],
+    "composition": "人物剪影置于画面下部的山脊线上，与上方广袤的云海形成大小对比，凸显人的渺小与自然的壮阔。",
+    "colorAnalysis": "低饱和度的蓝灰调统一画面，迷雾中的渐变层次丰富而柔和。",
+    "aestheticNote": "剪影是最纯粹的视觉形式——当细节被隐去，只剩下轮廓，反而赋予了画面更强的情绪力量。"
+  },
+  {
+    "id": "pex-4",
+    "title": "阳光枝头",
+    "author": "Wenxiang",
+    "category": "自然/微距",
+    "imageUrl": "https://images.pexels.com/photos/36677302/pexels-photo-36677302.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["树枝", "逆光", "天空"],
+    "composition": "树枝从画面左下方斜伸向右上方，形成优雅的对角线构图，留白部分给了天空足够的呼吸空间。",
+    "colorAnalysis": "暖金色阳光与青蓝色天空形成鲜明的冷暖补色对比，逆光下树叶呈现半透明的质感。",
+    "aestheticNote": "逆光是摄影中最富表现力的光线之一——它让普通的物体产生光晕，平凡的场景瞬间变得非凡。"
+  },
+  {
+    "id": "pex-5",
+    "title": "雨滴涟漪",
+    "author": "James Morgan",
+    "category": "自然/微距",
+    "imageUrl": "https://images.pexels.com/photos/36077216/pexels-photo-36077216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["雨", "水", "抽象"],
+    "composition": "特写取景，雨滴在水面激起的涟漪形成一圈圈同心圆，自然的几何图案充满画面。",
+    "colorAnalysis": "青绿色水面与灰白色天空的倒影融合，圆圈纹理打破了水面的平静，形成动态的抽象画。",
+    "aestheticNote": "最动人的美往往藏在最普通的日常中——雨滴的涟漪是自然界的艺术，每一圈都是精准的几何。"
+  },
+  {
+    "id": "pex-6",
+    "title": "暮色航线",
+    "author": "Clarence Chan",
+    "category": "摄影",
+    "imageUrl": "https://images.pexels.com/photos/36800240/pexels-photo-36800240.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["黄昏", "天空", "线条"],
+    "composition": "飞机云划过天空，形成一条笔直的引导线，将视线从画面左侧引向右侧的暖色天际。",
+    "colorAnalysis": "冷暖过渡——深蓝到橙黄的渐变是经典的自然色轮，飞机云的白色划破天空形成视觉焦点。",
+    "aestheticNote": "一条简单的线就能改变整个画面的格局。飞机云不仅分割了天空，也赋予画面以时间的维度。"
+  },
+  {
+    "id": "pex-7",
+    "title": "悬崖浪涛",
+    "author": "Ionut Vlad",
+    "category": "自然/微距",
+    "imageUrl": "https://images.pexels.com/photos/37439123/pexels-photo-37439123.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["悬崖", "海浪", "自然"],
+    "composition": "前中后三景层次分明——前景岩石、中景海浪、远景天际线，营造出强烈的纵深感。",
+    "colorAnalysis": "整体的蓝绿色调统一而和谐，海浪的白色泡沫作为提亮元素，打破了大面积冷调的沉闷。",
+    "aestheticNote": "三景构图法是最经典的风景摄影构图——它模拟人眼观看的方式，由近及远，层层深入。"
+  },
+  {
+    "id": "pex-8",
+    "title": "飞鸟",
+    "author": "Sergey Antonov",
+    "category": "自然/微距",
+    "imageUrl": "https://images.pexels.com/photos/37329282/pexels-photo-37329282.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["飞鸟", "天空", "自由"],
+    "composition": "飞鸟展开双翅位于画面中央偏上，下方是大面积纯净的蓝色天空，极简构图凸显主体。",
+    "colorAnalysis": "纯蓝色背景与黑色飞鸟形成强烈的明度和色彩对比，画面简洁有力。",
+    "aestheticNote": "留白的极致运用——当背景足够简洁，主体的每一个细节都变得无比重要。这就是少即是多的力量。"
+  },
+  {
+    "id": "pex-9",
+    "title": "巴黎夜色",
+    "author": "Darkshade",
+    "category": "建筑/空间",
+    "imageUrl": "https://images.pexels.com/photos/29815494/pexels-photo-29815494.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["巴黎", "夜景", "城市"],
+    "composition": "建筑作为前景框架，将埃菲尔铁塔框在中央，形成经典的前景构图法。",
+    "colorAnalysis": "暖色城市灯光与深蓝色夜空形成互补对比，亮部集中在画面中心成为视觉焦点。",
+    "aestheticNote": "框架构图是最有效的视觉引导手段之一——它告诉观者的眼睛：往这里看。"
+  },
+  {
+    "id": "pex-10",
+    "title": "暖阳街角",
+    "author": "Luis Quintero",
+    "category": "摄影",
+    "imageUrl": "https://images.pexels.com/photos/29948214/pexels-photo-29948214.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "tags": ["街头", "人文", "光影"],
+    "composition": "斜侧光从画面外射入，在地面投下长长的影子，利用光影的明暗对比构建空间。",
+    "colorAnalysis": "暖金色的斜阳与地面的灰褐色系统一和谐，低色温暖调营造怀旧氛围。",
+    "aestheticNote": "光线是摄影的灵魂。斜射光拉长了影子，赋予了原本平淡的街角以戏剧性和叙事感。"
   }
-}
+]}}
